@@ -1,0 +1,59 @@
+﻿@model prjWebApplication1.Models.Order
+
+@{
+    ViewData["Title"] = "Create";
+}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<link href="~/css/ForTable.css" rel="stylesheet" />
+
+
+    <h1>Create</h1>
+
+    <div>
+        <p>
+            <a asp-action="Create">新增資料</a>
+        </p>
+    </div>
+
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+                <div class="form-group">
+                    <label asp-for="OrderRemark" class="control-label"></label>
+                    <input asp-for="OrderRemark" class="form-control" />
+                    <span asp-validation-for="OrderRemark" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MemberId" class="control-label"></label>
+                    <input asp-for="MemberId" class="form-control" />
+                    <span asp-validation-for="MemberId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="OrderstatusId" class="control-label"></label>
+                    <input asp-for="OrderstatusId" class="form-control" />
+                    <span asp-validation-for="OrderstatusId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="RoomId" class="control-label"></label>
+                    <input asp-for="RoomId" class="form-control" />
+                    <span asp-validation-for="RoomId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="List">回列表</a>
+    </div>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSIT143-FIND HOTEL</title>
+    <link rel="icon" href="~/images/favicon.ico">
+    <link rel="shortcut icon" href="~/images/favicon.ico" />
+    <link rel="stylesheet" href="~/booking/css/booking.css">
+    <link rel="stylesheet" href="~/css/camera.css">
+    <link rel="stylesheet" href="~/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container_12">
+            <div class="grid_12">
+                <div class="menu_block">
+                    <nav class="horizontal-nav full-width horizontalNav-notprocessed">
+                        <ul class="sf-menu">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">首頁</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="MemberCreate" asp-action="Login">登入</a>
+                            </li>
+                                 <li class="nav-item">
+                                     <a class="nav-link text-dark" asp-area="" asp-controller="MemberCreate" asp-action="Register">註冊</a>
+                                 </li>
+                                 <li><a href="index-3.html">搜好房</a></li>
+                                 <li class="nav-item">
+                                     <a class="nav-link text-dark" asp-area="" asp-controller="Order" asp-action="List">訂單管理</a>
+                                 </li>
+                                 <li class="nav-item">
+                                     <a class="nav-link text-dark" asp-area="" asp-controller="Discount" asp-action="DiscountAdmin">優惠管理</a>
+                                 </li>
+                                 <li class="nav-item">
+                                     <a class="nav-link text-dark" asp-area="" asp-controller="Activity" asp-action="List">活動管理</a>
+                                 </li>
+                                 <li class="nav-item">
+                                     <a class="nav-link text-dark" asp-area="" asp-controller="Member" asp-action="MemberList">會員總攬</a>
+                                 </li> 
+                            
+                        </ul>
+                    </nav>
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+            @*<div class="grid_12">
+                <h1>
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Your Happy Family">
+                    </a>
+                </h1>
+            </div>*@
+        </div>
+    </header>
+
+
+    
+
+    
+
+    @RenderBody()
+    <script src="~/js/jquery.js"></script>
+    <script src="~/js/jquery-migrate-1.2.1.js"></script>
+    <script src="~/js/script.js"></script>
+    <script src="~/js/superfish.js"></script>
+    <script src="~/js/jquery.ui.totop.js"></script>
+    <script src="~/js/jquery.equalheights.js"></script>
+    <script src="~/js/jquery.mobilemenu.js"></script>
+    <script src="~/js/jquery.easing.1.3.js"></script>
+    <script src="~/js/owl.carousel.js"></script>
+    <script src="~/js/camera.js"></script>
+    <script src="~/js/jquery.mobile.customized.min.js"></script>
+    @*<script src="~/booking/js/booking.js"></script>*@
+    @RenderSection("scripts", required: false)
+    <footer>
+        <div class="container_12">
+            <div class="grid_12">
+                <div class="socials">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-google-plus"></a>
+                </div>
+                <div class="copy">
+                    Hello Welcome MSIT143-2 (c) 2022 | <a href="#">MSIT143-FIND HOTEL</a> | MSIT143 FindHotel -版權所有，請勿抄襲 <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

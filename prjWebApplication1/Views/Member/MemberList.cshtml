@@ -1,0 +1,124 @@
+﻿@model IEnumerable<prjWebApplication1.Models.Member>
+
+
+@{
+    ViewData["Title"] = "會員總攬";
+}
+
+<h1>會員總攬</h1>
+
+<p>
+    <a asp-action="MemberCreate">建立會員</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                序
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MemberAccount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MemberPassword)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MemberName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BirthDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MemberPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MemberEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CityId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Authority)
+            </th>
+            <th>
+                功能
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @using (Html.BeginForm())
+        {
+            <tr>
+                <td>
+                </td>
+                <td>
+                    @Html.TextBox("KW_MemberAccount", "", new { @class = "form-control" })
+                </td>
+                <td>
+                    @Html.TextBox("KW_MemberPassword", "", new { @class = "form-control" })
+                </td>
+                <td>
+                    @Html.TextBox("KW_MemberName", "", new { @class = "form-control" })
+                </td>
+                <td>
+                </td>
+                <td>
+                    @Html.TextBox("KW_MemberPhone", "", new { @class = "form-control" })
+                </td>
+                <td>
+                    @Html.TextBox("KW_MemberEmail", "", new { @class = "form-control" })
+                </td>
+                <td>
+                    @Html.TextBox("KW_CityId", "", new { @class = "form-control" })
+                </td>
+                <td>
+                    @Html.TextBox("KW_Authority", "", new { @class = "form-control" })
+                </td>
+                <td>
+                    <input type="submit" value="查詢" class="form-control" />
+                </td>
+            </tr>
+        }
+        @{
+            int count = 0;
+            foreach (var item in Model)
+            {
+                count++;
+                <tr>
+                    <td>
+                        @count
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MemberAccount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MemberPassword)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MemberName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BirthDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MemberPhone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MemberEmail)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CityId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Authority)
+                    </td>
+                    <td>
+                        @Html.ActionLink("修改", "MemberEdit", new { MemberId = item.MemberId }) |
+                        @Html.ActionLink("刪除", "MemberDelete", new { MemberId = item.MemberId })
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

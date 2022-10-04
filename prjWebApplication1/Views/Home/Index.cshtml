@@ -1,0 +1,94 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<link href="~/css/BookForm.css" rel="stylesheet" />
+<script src="~/js/BookForm.js"></script>
+<div class="content">
+    <div class="container_12">
+        <div class="grid_4">
+            <div class="banner">
+                <img src="images/ban_img2.jpg" alt="">
+                <div class="label">
+                    <div class="title">台北</div>
+                    <div class="price">FROM<span>$ 15000</span></div>
+                    <a href="#">LEARN MORE</a>
+                </div>
+            </div>
+        </div>
+        <div class="grid_4">
+            <div class="banner">
+                <img src="images/ban_img1 - 複製.jpg" alt="">
+                <div class="label">
+                    <div class="title">高雄</div>
+                    <div class="price">FROM<span>$ 6000</span></div>
+                    <a href="#">LEARN MORE</a>
+                </div>
+            </div>
+        </div>
+        <div class="grid_4">
+            <div class="banner">
+                <img src="images/ban_img3.jpg" alt="">
+                <div class="label">
+                    <div class="title">花蓮</div>
+                    <div class="price">FROM<span>$ 4600</span></div>
+                    <a href="#">LEARN MORE</a>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<form action="reservation.php" method="post">
+    <div class="elem-group">
+        <label for="name">姓名</label>
+        <input type="text" id="name" name="visitor_name" placeholder="王小名" pattern=[A-Z\sa-z]{3,20} required>
+    </div>
+    <div class="elem-group">
+        <label for="email">信箱</label>
+        <input type="email" id="email" name="visitor_email" placeholder="hello.wang@email.com" required>
+    </div>
+    <div class="elem-group">
+        <label for="phone">連絡電話</label>
+        <input type="tel" id="phone" name="visitor_phone" placeholder="0900-000-000" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+    </div>
+    <hr>
+    <div class="elem-group inlined">
+        <label for="adult">大人</label>
+        <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+    </div>
+    <div class="elem-group inlined">
+        <label for="child">兒童</label>
+        <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+    </div>
+    <div class="elem-group inlined">
+        <label for="checkin-date">入住時間</label>
+        <input type="date" id="checkin-date" name="checkin" required>
+    </div>
+    <div class="elem-group inlined">
+        <label for="checkout-date">退房時間</label>
+        <input type="date" id="checkout-date" name="checkout" required>
+    </div>
+    <div class="elem-group">
+        <label for="room-selection">選擇房型偏好</label>
+        <select id="room-selection" name="room_preference" required>
+            <option value="family">家庭房</option>
+            <option value="double"> 雙人房</option>
+            <option value="single">單人房</option>
+        </select>
+    </div>
+    <hr>
+    <div class="elem-group">
+        <label for="message">想告訴我們甚麼呢?</label>
+        <textarea id="message" name="visitor_message" placeholder="歡迎告訴我們想備註的事項。" required></textarea>
+    </div>
+    <button type="submit">訂房間</button>
+</form>

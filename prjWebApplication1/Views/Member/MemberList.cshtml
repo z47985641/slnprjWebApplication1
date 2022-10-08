@@ -18,28 +18,28 @@
                 序
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MemberAccount)
+                會員帳號
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MemberPassword)
+                會員密碼
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MemberName)
+                姓名
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.BirthDate)
+                生日
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MemberPhone)
+                電話
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MemberEmail)
+                信箱
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CityId)
+                城市編號
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Authority)
+                權限編號
             </th>
             <th>
                 功能
@@ -114,8 +114,9 @@
                         @Html.DisplayFor(modelItem => item.Authority)
                     </td>
                     <td>
-                        @Html.ActionLink("修改", "MemberEdit", new { MemberId = item.MemberId }) |
-                        @Html.ActionLink("刪除", "MemberDelete", new { MemberId = item.MemberId })
+                        @Html.ActionLink("修改", "MemberEdit", new { MemberId = item.MemberId }, new { @class = "btn btn-primary" }) |
+                        @Html.ActionLink("刪除", "Delete", "Order", new { id = item.MemberId },
+                        new { onclick = "return confirm('確定要刪除嗎?')", Class = "btn btn-danger" })
                     </td>
                 </tr>
             }

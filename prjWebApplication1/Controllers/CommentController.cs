@@ -59,6 +59,8 @@ namespace WebApplication1.Controllers
             Comment c = db.Comments.FirstOrDefault(d => d.CommentId == input.Id);
             if (c != null)
             {
+                c.CommentId = input.Id; 
+                c.RoomId = input.RoomId;
                 c.CommentDetail = input.CommentDetail;
                 c.CommentPoint = input.CommentPoint;
                 db.SaveChanges();

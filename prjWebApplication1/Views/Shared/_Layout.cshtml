@@ -4,93 +4,160 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MSIT143-FIND HOTEL</title>
-    <link rel="icon" href="~/images/favicon.ico">
-    <link rel="shortcut icon" href="~/images/favicon.ico" />
-    <link rel="stylesheet" href="~/booking/css/booking.css">
-    <link rel="stylesheet" href="~/css/camera.css">
-    <link rel="stylesheet" href="~/css/owl.carousel.css">
-    <link rel="stylesheet" href="~/css/style.css">
+    <title>FIND HOTEL</title>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
+    <!-- Css Styles -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="~/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="~/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="~/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/style.css" type="text/css">
 </head>
+
 <body>
-    <header>
-        <div class="container_12">
-            <div class="grid_12">
-                <div class="menu_block">
-                    <nav class="horizontal-nav full-width horizontalNav-notprocessed">
-                        <ul class="sf-menu">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">首頁</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="MemberCreate" asp-action="Login">登入</a>
-                            </li>
-                                 <li class="nav-item">
-                                     <a class="nav-link text-dark" asp-area="" asp-controller="MemberCreate" asp-action="Register">註冊</a>
-                                 </li>
-                                 <li><a href="index-3.html">搜好房</a></li>
-                                 <li class="nav-item">
-                                     <a class="nav-link text-dark" asp-area="" asp-controller="Order" asp-action="List">訂單管理</a>
-                                 </li>
-                                 <li class="nav-item">
-                                     <a class="nav-link text-dark" asp-area="" asp-controller="Discount" asp-action="DiscountAdmin">優惠管理</a>
-                                 </li>
-                                 <li class="nav-item">
-                                     <a class="nav-link text-dark" asp-area="" asp-controller="Activity" asp-action="List">活動管理</a>
-                                 </li>
-                                 <li class="nav-item">
-                                     <a class="nav-link text-dark" asp-area="" asp-controller="Member" asp-action="MemberList">會員總攬</a>
-                                 </li> 
-                            
+    <header class="header-section">
+        <div class="top-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <ul class="tn-left">
+                            <li><i class="fa fa-phone"></i> (02) 6631-6588</li>
+                            <li><i class="fa fa-envelope"></i>FIND HOTEL@gmail.com</li>
                         </ul>
-                    </nav>
-                    <div class="clear">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="tn-right">
+                            <div class="top-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </div>
+                            <a href="#" class="bk-btn">立即訂房</a>
+                            <div class="language-option">
+                                <img src="~/img/TAIWAN.png" >
+                                <span>TW <i class="fa fa-angle-down"></i></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            @*<div class="grid_12">
-                <h1>
-                    <a href="index.html">
-                        <img src="images/logo.png" alt="Your Happy Family">
-                    </a>
-                </h1>
-            </div>*@
+        </div>
+        <div class="menu-item">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="logo">
+                                <img src="../img/logo.png" />
+                        </div>
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="nav-menu">
+                            <nav class="mainmenu">
+                                <ul>
+                                    <li class="active"><a asp-area="" asp-controller="Home" asp-action="Index">首頁</a></li>
+                                    <li class="active"><a asp-area="" asp-controller="Activity" asp-action="List">活動</a></li>
+                                    <li class="active"><a asp-area="" asp-controller="Discount" asp-action="DiscountAdmin">優惠</a></li>
+                                    <li>
+                                        <a asp-area="" asp-controller="Room" asp-action="List">搜好房</a>
+                                        <ul class="dropdown">
+                                            <li><a href="./room-details.html">家庭房</a></li>
+                                            <li><a href="./blog-details.html">雙人房</a></li>
+                                            <li><a href="#">單人房</a></li>
+                                            <li><a href="#">團體包棟</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="active"><a asp-area="" asp-controller="Order" asp-action="List">訂單</a></li>
+                                    <li class="active"><a asp-area="" asp-controller="Member" asp-action="MemberList">會員註冊/登入</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
 
-    
 
-    
+
+
 
     @RenderBody()
-    <script src="~/js/jquery.js"></script>
-    <script src="~/js/jquery-migrate-1.2.1.js"></script>
-    <script src="~/js/script.js"></script>
-    <script src="~/js/superfish.js"></script>
-    <script src="~/js/jquery.ui.totop.js"></script>
-    <script src="~/js/jquery.equalheights.js"></script>
-    <script src="~/js/jquery.mobilemenu.js"></script>
-    <script src="~/js/jquery.easing.1.3.js"></script>
-    <script src="~/js/owl.carousel.js"></script>
-    <script src="~/js/camera.js"></script>
-    <script src="~/js/jquery.mobile.customized.min.js"></script>
-    @*<script src="~/booking/js/booking.js"></script>*@
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/js/jquery.nice-select.min.js"></script>
+    <script src="~/js/jquery-ui.min.js"></script>
+    <script src="~/js/jquery.slicknav.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/main.js"></script>
     @RenderSection("scripts", required: false)
-    <footer>
-        <div class="container_12">
-            <div class="grid_12">
-                <div class="socials">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-google-plus"></a>
+
+<footer class="footer-section">
+    <div class="container">
+        <div class="footer-text">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="ft-about">
+                        <div class="logo">
+                            <a href="#">
+                                <img src="../img/contact.png" />  @*..絕對路徑  ~為相對路徑*@  
+                            </a>
+                        </div>
+                        <div class="fa-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-tripadvisor"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="copy">
-                    Hello Welcome MSIT143-2 (c) 2022 | <a href="#">MSIT143-FIND HOTEL</a> | MSIT143 FindHotel -版權所有，請勿抄襲 <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a>
+                <div class="col-lg-3 offset-lg-1">
+                    <div class="ft-contact">
+                        <h6>聯絡我們</h6>
+                        <ul>
+                            <li>(02)6631-6588(臺北窗口)</li>
+                            <li>FIND HOTEL@gmail.com</li>
+                            <li>台北市大安區復興南路一段390號2樓(大安捷運站4號、6號出口)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1">
+                    <div class="ft-newslatter">
+                        <h6>省時又省錢！</h6>
+                        <p>現在訂閱，我們將寄送最佳訂房優惠給您。</p>
+                        <form action="#" class="fn-form">
+                            <input type="text" placeholder="Email">
+                            <button type="submit"><i class="fa fa-send"></i></button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+    <div class="copyright-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <ul>
+                        <li><a href="#">聯繫我們</a></li>
+                        <li><a href="#">使用條款</a></li>
+                        <li><a href="#">隱私</a></li>
+                        <li><a href="#">本網站內容由© 2022FIND HOTEL 保留所有權利</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>

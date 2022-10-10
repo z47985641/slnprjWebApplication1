@@ -3,9 +3,6 @@
 @{
     ViewData["Title"] = "List";
 }
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-<link href="~/css/ForTable.css" rel="stylesheet" />
 <div class="container">
     <br />
     <p style="font-size:30px" class="forp">訂單一覽表</p>
@@ -16,26 +13,26 @@
         }
     </div>
     <p>
-            <a asp-action="Create">新增訂單</a>
+            <a asp-action="Create" class="btn btn-dark">新增訂單</a>
         </p>
 
     <table class="table table-hover">
         <thead>
             <tr>
                 <th class="table__heading">
-                    @Html.DisplayNameFor(model => model.OrderId)
+                    訂單編號
                 </th>
                 <th class="table__heading">
-                    @Html.DisplayNameFor(model => model.OrderRemark)
+                    訂單備註
                 </th>
                 <th class="table__heading">
-                    @Html.DisplayNameFor(model => model.MemberId)
+                    會員編號
                 </th>
                 <th class="table__heading">
-                    @Html.DisplayNameFor(model => model.OrderstatusId)
+                    訂單狀態
                 </th>
                 <th class="table__heading">
-                    @Html.DisplayNameFor(model => model.RoomId)
+                    房源編號
                 </th>
                 <th></th>
             </tr>

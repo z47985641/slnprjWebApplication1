@@ -3,15 +3,19 @@
 @{
     ViewData["Title"] = "DiscountMain";
 }
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<link href="~/css/ForTable.css" rel="stylesheet" />
 
-<h1>優惠折扣</h1>
+<br />
+<p style="font-size:30px" class="forp">優惠折扣</p>
 <div>
     <div class="container p-lg-5 p-3 wow bounceInUp">
         <div class="row">
             @foreach (var item in Model)
             {
                 <div class="col-lg-3 col-sm-6 mb-4">
-                    <div class="card" style="height:130px">
+                    <div class="card">
                         <img src=""
                              class="card-img-top" />
                         <div class="card-body">
